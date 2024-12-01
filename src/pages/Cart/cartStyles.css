@@ -1,0 +1,724 @@
+/* Apply Color to a component instantly */
+.color {
+   background-color: darkcyan;
+}
+
+.cart-container {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.cart-logo-img {
+   width: 100px;
+}
+
+.tillButton {
+   position: absolute;
+   width: 150px;
+   height: 150px;
+   left: -92px;
+   padding-right: 5px;
+   background-color: #007bff;
+   border-radius: 50%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   z-index: 1;
+   font-size: 20px;
+   opacity: 0.7;
+   transition: opacity 0.3s ease-in-out;
+   animation: breathe 4s ease infinite;
+}
+
+.tillButton:focus {
+   opacity: 1;
+}
+
+.till-body {
+   height: 80%;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.till-body-left {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.till-body-right {
+   width: 50%;
+   height: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.till-footer {
+   font-weight: 600;
+   color: darkgreen;
+}
+
+.manager-opts {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 10px 0;
+}
+
+.manager-opt-button {
+   padding: 0.3em 0.6em;
+   background-color: transparent;
+   color: black;
+   border: 1px solid black;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.cart-left,
+.cart-right {
+   height: 100%;
+}
+
+.cart-left {
+   position: relative;
+   width: 65%;
+   margin-left: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   overflow-y: scroll;
+}
+
+.white {
+   background-color: white;
+}
+
+.item-list {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   overflow-y: scroll;
+   scroll-behavior: smooth;
+}
+
+.item-list:last-child {
+   padding-bottom: 20px;
+}
+
+.item-list::-webkit-scrollbar {
+   display: none;
+}
+
+.empty-cart {
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.product-tile {
+   cursor: pointer;
+   width: 95%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   color: black;
+   background-color: white;
+   border: 1px solid rgb(225, 225, 225);
+   border-radius: 10px;
+   margin-top: 10px;
+   transition: transform 0.2s ease-in-out;
+}
+
+.pt-selected {
+   transform: scale(1.05);
+   background-color: aliceblue;
+   border: 1px solid rgb(0, 154, 175);
+   transition: transform 0.2s ease-in-out;
+}
+
+.product-tile.fade-out {
+   opacity: 0;
+}
+
+.product-tile img {
+   width: 90px;
+   height: 90px;
+   margin: 10px;
+   margin-left: none;
+   margin-right: none;
+   padding: 5px;
+   border: 1px solid rgb(235, 235, 235);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-1,
+.detail-2,
+.detail-3,
+.detail-4,
+.detail-5,
+.detail-6 {
+   height: 100%;
+   width: 100px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.detail-2 {
+   height: 50px;
+   margin-top: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.detail-3 {
+   width: 250px;
+   padding-left: 20px;
+   align-items: flex-start;
+   justify-content: space-evenly;
+}
+
+.brand-name {
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.product-name {
+   font-size: 15px;
+}
+
+.product-serial {
+   font-size: 12px;
+   font-weight: 500;
+   color: rgb(0, 154, 175);
+}
+
+.cb-count {
+   font-size: 12px;
+   font-weight: 500;
+   color: rgb(0, 154, 175);
+}
+
+.detail-4 {
+   width: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.detail-5 {
+   width: 100px;
+}
+
+.detail-6 {
+   width: 30px;
+}
+
+.product-price {
+   font-size: 20px;
+   font-weight: 600;
+   text-align: center;
+}
+
+.mrp,
+.discount {
+   font-size: 12px;
+   font-weight: 500;
+   margin: 0 2px;
+}
+
+.subtotal-rupee {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.subtotal-paise {
+   font-size: 14px;
+   font-weight: 400;
+}
+
+.mrp {
+   text-decoration: line-through;
+}
+
+.discount {
+   color: rgb(38, 38, 255);
+   font-weight: 600;
+}
+
+.product-quantity {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.25rem;
+   font-weight: 500;
+   padding: 2px 6px;
+   color: black;
+   border-radius: 50%;
+}
+
+.pq-button {
+   background-color: transparent;
+   border: 1px solid black;
+   margin: 0 10px;
+}
+
+.delete-button {
+   background-color: transparent;
+   color: crimson;
+}
+
+.delete-button:focus {
+   outline: none;
+}
+
+.delete-button:active {
+   transform: scale(0.9);
+   background-color: black;
+   color: white;
+}
+
+.cart-right {
+   width: 35%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.cart-summary {
+   width: 80%;
+   height: 40%;
+   border: 1px dashed grey;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.summary-item {
+   width: 80%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.summary-item:last-child {
+   font-size: 20px;
+}
+
+.summary-label {
+   font-weight: 300;
+}
+
+.extra-info {
+   font-size: x-small;
+}
+
+.summary-value {
+   font-weight: 500;
+}
+
+hr {
+   width: 80%;
+   margin: 0;
+}
+
+.grand-total {
+   font-weight: 600;
+}
+
+.discount-value {
+   color: rgb(38, 38, 255);
+   font-weight: 600;
+}
+
+.misc-div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.notif-buttons-1,
+.notif-buttons-2 {
+   display: flex;
+   flex-direction: row;
+}
+
+.notif-button {
+   margin: 7px;
+   background-color: transparent;
+   color: black;
+   border: 1px solid black;
+   font-weight: 400;
+}
+
+.notif-button.selected {
+   background-color: rgba(0, 0, 0, 0.8);
+   color: white;
+}
+
+.invisible {
+   display: none;
+}
+
+.empty {
+   border: none;
+   justify-content: space-evenly;
+}
+
+.payment-opts {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.pay-opt-button {
+   width: 70%;
+   height: 90px;
+   color: blue;
+   background-color: transparent;
+   border: 0.5px solid blue;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.highlighted {
+   font-size: 50px;
+   color: white;
+   background: rgb(2, 0, 36);
+   background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(66, 0, 105, 1) 0%,
+      rgba(0, 82, 170, 1) 100%
+   );
+}
+
+.carry-bag-title {
+   font-size: 30px;
+}
+
+.carry-bag-allItems {
+   width: 100%;
+   margin-bottom: 80px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: end;
+}
+
+.carry-bag-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.carry-bag-price {
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.cbCountDiv {
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.showdiv {
+   border: 1px solid darkblue;
+}
+
+/* Styles for the Popups */
+
+.popupContainer {
+   position: absolute;
+   width: 100%;
+   height: 94%;
+   background-color: rgb(0, 0, 0, 0.3);
+   backdrop-filter: blur(3px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 2;
+}
+
+.popup-outer {
+   width: 70%;
+   height: 80%;
+   border-radius: 30px;
+   background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.deletion-outer {
+   width: 50%;
+   height: 60%;
+   border-radius: 30px;
+   background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.popup-inner {
+   height: 90%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+
+.header-items {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.popup-content {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.deletion-body {
+   width: 90%;
+   height: 90%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+/* Styles for the SearchProductDialog */
+
+.search-header {
+   display: flex;
+   flex-direction: column;
+}
+
+.search-product-body {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.search-input-and-error {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.search-product-button {
+   height: fit-content;
+}
+
+.search-input {
+   width: 200px;
+   background-color: transparent;
+   color: black;
+   font-family: "Montserrat";
+   font-size: 1.8rem;
+   text-align: center;
+   border: none;
+   border-bottom: 1px solid black;
+   outline: none;
+}
+
+.reg-input:focus {
+   outline: none;
+   border: none;
+   transition: all 0.5 s ease-in-out;
+   cursor: none;
+}
+
+.search-product-result {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.search-product-result-image {
+   height: 250px;
+}
+
+.search-product-result-left {
+   display: flex;
+   flex-direction: row;
+}
+
+.search-product-result-right {
+   display: flex;
+   flex-direction: row;
+}
+
+.search-product-result-details {
+   font-size: x-large;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   margin-right: 50px; /* Adjust as needed for spacing between columns */
+}
+
+.search-product-result-details span {
+   white-space: nowrap; /* Prevent text from wrapping */
+   overflow: hidden;
+   text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
+}
+
+.manual-search {
+   display: flex;
+   justify-content: center;
+   font-size: small;
+}
+
+.manual-search-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.down-arrow-container {
+   position: fixed;
+   bottom: 20px;
+   left: 35%;
+   transform: translateX(-50%);
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   border: 1px solid black;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   background-color: rgb(0, 0, 200);
+}
+
+.down-arrow-icon {
+   font-size: 30px;
+}
+
+.quantButton {
+   font-size: 2em;
+   color: black;
+   background-color: transparent;
+}
+
+.extra-discount {
+   font-size: 0.7em;
+   font-weight: 500;
+   padding: 2px 5px;
+   margin: 10px;
+   color: green;
+   border: 1px solid green;
+   border-radius: 50px;
+}
+
+.manager-opts {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: flex-start;
+   margin-left: 100px;
+}
+
+.managerAccessHeading {
+   font-size: 2em;
+   text-align: center;
+}
+
+.managerAccessInput {
+   width: 200px;
+   height: 50px;
+   padding: 0 10px;
+   font-size: 1em;
+   background-color: transparent;
+   border: 1px solid grey;
+   border-radius: 5px;
+   font-family: "Montserrat";
+   font-weight: 500;
+   color: black;
+}
+
+.labelContainer {
+   margin: 10px 0;
+}
+
+.label {
+   font-size: large;
+   font-weight: 300;
+}
+
+.discountButton {
+   height: 40px;
+   background-color: transparent;
+   color: black;
+   border: 1px solid grey;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   font-size: small;
+   color: black;
+   margin-right: 10px;
+}
+
+.maSection {
+}
+
+.selectedDiscountButton {
+   background-color: #4556ee;
+   color: white;
+   font-weight: 700;
+}
+
+.headingContainer {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}

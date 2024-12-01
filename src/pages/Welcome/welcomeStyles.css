@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.left-div,
+.right-div,
+.time-div {
+   position: absolute;
+}
+
+.left-div {
+   z-index: 2;
+   left: 0;
+   top: 0;
+   margin: 50px 0 0 50px;
+}
+
+.right-div {
+   z-index: 1;
+   bottom: 0;
+   right: 0;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.time-div {
+   z-index: 1;
+   right: 0;
+   top: 0;
+   margin: 40px 40px 0 0;
+   font-size: larger;
+   font-weight: 400;
+}
+
+.heading,
+.subheading,
+.dateTime {
+   font-family: "Montserrat", sans-serif;
+}
+
+.heading,
+.subheading {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.heading-data {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   margin-top: 100px;
+}
+
+.heading-text {
+   font-size: 100px;
+   font-weight: 300;
+}
+
+.subheading {
+   font-size: 20px;
+   font-weight: 400;
+}
+
+.welcome-img {
+   width: 550px;
+   border-radius: 20px;
+}
+
+.logo-img {
+   width: 150px;
+}
+
+.button-28 {
+   appearance: none;
+   background-color: rgb(0, 51, 141);
+   border-radius: 15px;
+   box-sizing: border-box;
+   color: white;
+   cursor: pointer;
+   display: inline-block;
+   font-family: "Monolisa";
+   font-size: 24px;
+   font-weight: 400;
+   line-height: normal;
+   margin-top: 90px;
+   min-height: 60px;
+   min-width: 0;
+   outline: none;
+   padding: 16px 24px;
+   text-align: center;
+   text-decoration: none;
+   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   /* width: 50%; */
+   will-change: transform;
+}
+
+.button-28:active {
+   color: #fff;
+   background-color: #1a1a1a;
+   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+   transform: translateY(-2px);
+}
+
+.button-29-go {
+   width: 200px;
+   height: 200px;
+   align-items: center;
+   appearance: none;
+   background-image: radial-gradient(
+      100% 100% at 100% 0,
+      #5adaff 0,
+      #5468ff 100%
+   );
+   border: 0;
+   border-radius: 50%;
+   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+      rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-flex;
+   font-family: "Sansita Swashed", sans-serif;
+   font-size: 80px;
+   justify-content: center;
+   line-height: 1;
+   list-style: none;
+   overflow: hidden;
+   padding-left: 16px;
+   padding-right: 16px;
+   position: relative;
+   text-align: left;
+   text-decoration: none;
+   transition: box-shadow 0.15s, transform 0.15s;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   white-space: nowrap;
+   will-change: box-shadow, transform;
+   margin-top: 50px;
+   animation: breathe 3s infinite alternate;
+}
+
+.button-29-go:focus {
+   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29-go:hover {
+   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+   transform: translateY(-2px);
+}
+
+.button-29-go:active {
+   box-shadow: #3c4fe0 0 3px 7px inset;
+   transform: translateY(2px);
+}
+
+@keyframes breathe {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.05);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+/* GO Button */
+
+.button-29 {
+   align-items: center;
+   appearance: none;
+   background-image: radial-gradient(
+      100% 100% at 100% 0,
+      #5adaff 0,
+      #5468ff 100%
+   );
+   border: 0;
+   border-radius: 6px;
+   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+      rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   display: inline-flex;
+   font-family: "JetBrains Mono", monospace;
+   height: 48px;
+   justify-content: center;
+   line-height: 1;
+   list-style: none;
+   overflow: hidden;
+   padding-left: 16px;
+   padding-right: 16px;
+   position: relative;
+   text-align: left;
+   text-decoration: none;
+   transition: box-shadow 0.15s, transform 0.15s;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+   white-space: nowrap;
+   will-change: box-shadow, transform;
+   font-size: 18px;
+}
+
+.button-29:focus {
+   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+   transform: translateY(-2px);
+}
+
+.button-29:active {
+   box-shadow: #3c4fe0 0 3px 7px inset;
+   transform: translateY(2px);
+}
